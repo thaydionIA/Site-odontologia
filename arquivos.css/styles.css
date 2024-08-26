@@ -148,6 +148,7 @@ main {
     text-align: center;
     position: relative;
     cursor: pointer; /* Indica que o card é clicável */
+    
 }
 
 .card::before {
@@ -182,6 +183,8 @@ main {
     font-size: 1em;
     color: #555;
     margin-bottom: 20px;
+    font-family: 'Roboto';
+    text-align: center;
 }
 
 .card a {
@@ -201,7 +204,7 @@ main {
     transform: scale(1.05);
 }
 
-.slideshow-container {
+.slideshow-container,.slideshow-container2 {
     
     position: relative;
     width: 100%;
@@ -210,28 +213,28 @@ main {
     border-radius: var(--border-radius);
 }
 
-.mySlides {
+.mySlides, .mySlides2{
     display: none;
     position: relative;
     width: 100%;
 }
 
-.mySlides img {
+.mySlides img , .mySlides2 img {
     width: 100%;
     height: auto;
     max-height: 500px;
     object-fit: cover;
     border-radius: var(--border-radius);
 }
-.mySlides p {
+.mySlides p,.mySlides2 {
     text-align: center;
 }
-.dots {
+.dots,.dots2 {
     text-align: center;
     padding: 10px 0;
 }
 
-.dot {
+.dot ,.dot2{
     height: 12px;
     width: 12px;
     margin: 0 4px;
@@ -241,7 +244,7 @@ main {
     transition: background-color 0.6s ease;
 }
 
-.dot.active {
+.dot.active,.dot2.active {
     background-color: var(--secondary-color);
 }
 
@@ -491,4 +494,35 @@ footer h3 {
         height: auto;
         max-height: 300px;
     }
+}
+.hidden {
+    display: none;
+}
+
+.toggle-text {
+    display: block;
+    margin-top: 10px;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.toggle-text:hover {
+    text-decoration: underline;
+}
+
+#show-more {
+    display: block;
+}
+
+#show-less {
+    display: none;
+}
+
+#more-text:not(.hidden) ~ #show-more {
+    display: none;
+}
+
+#more-text.hidden ~ #show-less {
+    display: none;
 }

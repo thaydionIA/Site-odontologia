@@ -1,0 +1,16 @@
+.button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-decoration: none; 
+    padding: 16px 32px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: #e15b4e;
+    transform: translateY(-3px);
+}
